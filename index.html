@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 2 </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id = "nav">
+        <input type="button" value="🌒dark" id="dark" onclick="dark()">
+    </div> 
+    <div id = "header">
+            <div id = "profile">
+        <br>
+        <img src= "man.png" height="150px" width="150px" alt="profile picture" id="profile-pic">
+        <h1>Shiv Mourya</h1>
+        <h3>date of birth : 22/07/2008</h3>
+        <h3>Phone : +1234567890</h3>
+        <h3>College Fresher</h3>
+        <div>🦧🦮🐲</div>
+    </div>
+    </div>
+    <script>
+        function dark() {
+            document.body.style.fontFamily = "'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif";
+            document.body.style.backgroundColor = "black";
+            document.body.style.color = "white";
+            let main = document.getElementById("profile");
+            let pic = document.getElementById("profile-pic");
+            pic.style.border = "1px solid white";
+            main.style.backgroundColor = "black";
+            main.style.border = "1px solid white";
+            document.getElementById("dark").value = "☀️light";
+            document.getElementById("dark").setAttribute("onclick", "light()");
+        }
+        function light() {
+            document.body.style.fontFamily = "'Courier New', Courier, monospace";
+            document.body.style.backgroundColor = "white";
+            document.body.style.color = "black";
+            let main = document.getElementById("profile");
+            let pic = document.getElementById("profile-pic");
+            pic.style.border = "1px solid black";
+            main.style.backgroundColor = "white";
+            main.style.border = "1px solid black";
+            document.getElementById("dark").value = "🌒dark";
+            document.getElementById("dark").setAttribute("onclick", "dark()");
+        }
+    </script>
+</body>
+</html>
